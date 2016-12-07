@@ -8,6 +8,9 @@
 
   sudo make binary
 ```
+
+Alternatively, you can install docker using: ```sudo apt-get install docker``` and copying https://github.com/Changy-/Docker-Security/blob/master/team_chupacabra_security.json into your working directory.
+
 For example, once Docker is installed you can run a container which uses our security configuraion with the following command:
 ```
 sudo docker run -it --security-opt seccomp=team_chupacabra_security.json ubuntu sh
