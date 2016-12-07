@@ -9,12 +9,13 @@
   sudo make binary
 ```
 For example, once Docker is installed you can run a container which uses our security configuraion with the following command:
+```
 sudo docker run -it --security-opt seccomp=team_chupacabra_security.json ubuntu sh
-
+```
 Once inside the container you need to find a way to break the security configuration which blocks the risky system calls inside team_chupacabra_security.json.
 
 ###Compile and run your own code inside of the container.
-
+```
   1. Run apt-get update and install gcc, java jdk etc.
     apt-get update
     apt-get install gcc
@@ -22,4 +23,4 @@ Once inside the container you need to find a way to break the security configura
     
   2. Install any text editor, for example vim
     apt-get install vim
- 
+``` 
