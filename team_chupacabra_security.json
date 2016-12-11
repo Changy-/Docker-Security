@@ -7,21 +7,11 @@
 	],
 	"syscalls": [
 		{
-			"name": "openat",
-			"action": "SCMP_ACT_ERRNO",
-			"args": [
-				{
-				"index": 2,
-				"op": "SCMP_CMP_EQ",
-				"value": "__O_TMPFILE"
-				}
-				]
-		},
-		{
 			"name": "acct",
 			"action": "SCMP_ACT_ERRNO",
 			"args": []
 		},
+
 		{
 			"name": "add_key",
 			"action": "SCMP_ACT_ERRNO",
