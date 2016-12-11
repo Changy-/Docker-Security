@@ -14,9 +14,9 @@ Alternatively, you can install docker using: ```sudo apt-get install docker``` a
 ###Using Docker:
 The official documentation can be found here: https://docs.docker.com/
 
-Example usage: once Docker is installed you can run a container which uses our security configuraion with the following command:
+Example usage: once Docker is installed you can run a container which uses our security configuraion. The following command is an example of using the chmod system call. (This was not blocked in our config):
 ```
-sudo docker run -it --security-opt seccomp=team_chupacabra_security.json ubuntu sh
+docker run --security-opt seccomp:team_chupacabra_security.json ubuntu chmod 777 /etc/hosts
 ```
 Once inside the container you need to find a way to break the security configuration which blocks the risky system calls inside team_chupacabra_security.json.
 
