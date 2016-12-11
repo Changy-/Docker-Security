@@ -18,15 +18,5 @@ Example usage: once Docker is installed you can run a container which uses our s
 ```
 docker run --security-opt seccomp:team_chupacabra_security.json ubuntu chmod 777 /etc/hosts
 ```
-Once inside the container you need to find a way to break the security configuration which blocks the risky system calls inside team_chupacabra_security.json.
 
-###Compile and run your own code inside of the container.
-```
-  1. Run apt-get update and install gcc, java jdk etc.
-    apt-get update
-    apt-get install gcc
-    apt-get install default-jdk
-    
-  2. Install any text editor, for example vim
-    apt-get install vim
-``` 
+Alternatively, compile and run your own code inside of any other container.
